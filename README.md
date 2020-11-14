@@ -1,4 +1,4 @@
-## 简单的一个模板模板
+## 简单的一个模板
 
 [来源](https://github.com/lin-xin/vue-manage-system.git)
 
