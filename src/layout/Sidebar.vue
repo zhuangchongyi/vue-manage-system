@@ -54,6 +54,31 @@ export default {
           icon: 'el-icon-lx-global',
           index: 'i18n',
           title: '国际化功能'
+        },
+        {
+          icon: 'el-icon-lx-calendar',
+          index: 'menu-1',
+          title: 'menu-1',
+          subs: [
+            {
+              index: 'multiple',
+              title: 'menu-1-1'
+            },
+            {
+              index: 'menu-1-2',
+              title: 'menu-1-2',
+              subs: [
+                {
+                  index: 'multiple',
+                  title: 'menu-2-1'
+                },
+                {
+                  index: 'multiple',
+                  title: 'menu-2-2'
+                }
+              ]
+            }
+          ]
         }
       ]
     };
@@ -65,7 +90,7 @@ export default {
   },
   created() {
     // 通过 Event Bus 进行组件间通信，来折叠侧边栏
-    bus.$on('collapse', (msg) => {
+    bus.$on('collapse', msg => {
       this.collapse = msg;
       bus.$emit('collapse-content', msg);
     });
